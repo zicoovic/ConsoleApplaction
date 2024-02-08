@@ -1,0 +1,171 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'ProjectOne::stGameResults::GameWinner' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/C++/ConsoleApp/ProjectOneLib.h"
+                },
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProjectOne::stGameResults::{ctor}",
+                  "decoratedName": "??0stGameResults@ProjectOne@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "ProjectOne::stGameResults::GameWinner"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'ProjectOne::StRoundInfo::Winner' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/C++/ConsoleApp/ProjectOneLib.h"
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProjectOne::StRoundInfo::{ctor}",
+                  "decoratedName": "??0StRoundInfo@ProjectOne@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "ProjectOne::StRoundInfo::Winner"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'ProjectOne::StRoundInfo::ComputerChoice' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/C++/ConsoleApp/ProjectOneLib.h"
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProjectOne::StRoundInfo::{ctor}",
+                  "decoratedName": "??0StRoundInfo@ProjectOne@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "ProjectOne::StRoundInfo::ComputerChoice"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'ProjectOne::StRoundInfo::Player1Choice' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/C++/ConsoleApp/ProjectOneLib.h"
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProjectOne::StRoundInfo::{ctor}",
+                  "decoratedName": "??0StRoundInfo@ProjectOne@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "ProjectOne::StRoundInfo::Player1Choice"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33134.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/C++/ConsoleApp/ProjectOneLib.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "19b83ecf9b9029afe1a5e5d2e267775e480177e8f0b527e000ef2328b46112f9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/c++/consoleapp/algorithmsource3.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "0f9477dc0b1ad365d37b9299681fc75269365a2458dae326c503043f97def44d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/c++/consoleapp/mylib.h"
+          },
+          "hashes": {
+            "sha-256": "75dc1c7bd4f607dd3a0845852fcd80bf23fc4390b36b493ab1b8729dbdff161e"
+          }
+        }
+      ]
+    }
+  ]
+}

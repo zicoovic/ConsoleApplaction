@@ -1,0 +1,7 @@
+﻿  algorithmSource3.cpp
+D:\C++\ConsoleApp\algorithmSource3.cpp(257,36): warning C4101: 'MatrixResult': unreferenced local variable
+D:\C++\ConsoleApp\algorithmSource3.cpp(257,6): warning C4101: 'Matrix1': unreferenced local variable
+D:\C++\ConsoleApp\algorithmSource3.cpp(246,18): warning C4101: 'arrTransposed': unreferenced local variable
+D:\C++\ConsoleApp\algorithmSource3.cpp(229,6): warning C4101: 'arrSum': unreferenced local variable
+D:\C++\ConsoleApp\algorithmSource3.cpp(257,21): warning C4101: 'Matrix2': unreferenced local variable
+  ConsoleApp.vcxproj -> D:\C++\ConsoleApp\x64\Debug\ConsoleApp.exe
