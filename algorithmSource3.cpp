@@ -14,6 +14,7 @@
 
 	// problem #1/03
 	//Problem for action
+	// problem for working laptop
 
 	void FillMatrxWithRandomNumbers(int arr[3][3] , short Rows , short Cols) {
 	for (short i = 0; i < Rows; i++)
