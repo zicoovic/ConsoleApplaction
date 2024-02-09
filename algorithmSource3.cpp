@@ -16,12 +16,12 @@
 	//Problem for action
 	// problem for working laptop
 
-	void FillMatrxWithRandomNumbers(int arr[3][3] , short Rows , short Cols) {
+	void FillMatrixWithRandomNumbers(int arr[3][3] , short Rows , short Cols) {
 	for (short i = 0; i < Rows; i++)
 	{
 	for (int j = 0; j < Cols; j++)
 	{
-		arr[i][j] = ProjectTwo::RandomNumber(1, 10);
+		arr[i][j] = ProjectTwo::RandomNumber(1, 100);
 	}
 	}
 	}
@@ -119,7 +119,7 @@
 
 	//Problem #6/03
 
-	void FillMatrxWithOrderedNumbers(int arr[3][3], short Rows, short Cols) {
+	void FillMatrixWithOrderedNumbers(int arr[3][3], short Rows, short Cols) {
 		short counter = 0;
 		for (short i = 0; i < Rows; i++)
 		{
@@ -159,7 +159,7 @@
 
 	// Problem #08/03
 
-	void MultMatrixs(int Matrix1[3][3],  int Matrix2[3][3], int MatrixResult[3][3], short Rows, short Cols) {
+	void MultMatrixes(int Matrix1[3][3],  int Matrix2[3][3], int MatrixResult[3][3], short Rows, short Cols) {
 
 	
 		for (short i = 0; i < Rows; i++)
@@ -211,14 +211,28 @@
 		return sum;
 	}
 
+	//Problem #11/03
+	//MySolution
+	void CompareMatrix(int arrMatrix1[3][3] , int arrMatrix2[3][3] , short Rows, short Cols) {
+		if(arrMatrix1 == arrMatrix2)  {
+			cout << "\n\n" << "***Yes : Matrix's are equal***" << endl;
+		}else {
+			cout << "\n\n" << "***No: Matrix's are not equal***" << endl;
+		}
+	}
+
+	bool AreEqualMatrices(int arrMatrix1[3][3] , int arrMatrix2[3][3] , short Rows, short Cols) {
+		return (SumAllMatrix(arrMatrix1,Rows,Cols) == SumAllMatrix(arrMatrix2,Rows,Cols));
+	}
+
 	int main() {
 
 	srand((unsigned)time(NULL));
 
 	//Problem #1/03
 
-	//int arr[3][3];
-	/*FillMatrxWithRandomNumbers(arr, 3, 3);
+	int arr[3][3];
+	/*FillMatrixWithRandomNumbers(arr, 3, 3);
 	cout << "\n The following is  a 3x3 random matrix:\n\n\n";
 	PrintMatrix(arr, 3, 3);*/
 
@@ -228,7 +242,7 @@
 
 	//Problem #3/03
 
-	int arrSum[3];
+	// int arrSum[3];
 
 	//SumMatrixRowsInArray( arr, arrSum , 3 , 3);
 
@@ -245,8 +259,8 @@
 
 	//Problem #6/03
 
-	int arr[3][3] , arrTransposed[3][3];
-	/*FillMatrxWithOrderedNumbers(arr, 3, 3);
+	// int arr[3][3] , arrTransposed[3][3];
+	/*FillMatrixWithOrderedNumbers(arr, 3, 3);
 	cout << "\n The following is  a 3x3 ordered matrix:\n\n\n";
 	PrintVector(arr, 3, 3);*/
 	//cout << "\n\n";
@@ -258,14 +272,14 @@
 	//Problem #8/03
 	int Matrix1[3][3], Matrix2[3][3], MatrixResult[3][3];
 
-	/*FillMatrxWithRandomNumbers(Matrix1, 3, 3);
+	/*FillMatrixWithRandomNumbers(Matrix1, 3, 3);
 	cout << "\n Matrix1:\n\n\n";
 	PrintMatrix(Matrix1, 3, 3);
-	FillMatrxWithRandomNumbers(Matrix2, 3, 3);
+	FillMatrixWithRandomNumbers(Matrix2, 3, 3);
 	cout << "\n Matrix2:\n\n\n";
 	PrintMatrix(Matrix2, 3, 3);
 
-	MultMatrixs(Matrix1, Matrix2, MatrixResult,3,3);
+	MultMatrixes(Matrix1, Matrix2, MatrixResult,3,3);
 	cout << "\nResult:\n";
 	PrintMatrix(MatrixResult, 3 ,3);*/
 
@@ -277,11 +291,26 @@
 	PrintMiddleColsOfMatrix(arr, 3, 3);*/
 
 	//Problem #10/03
-	FillMatrxWithRandomNumbers(arr, 3, 3);
-	cout << "\n The following is  a 3x3 random matrix:\n\n\n";
-	PrintMatrix(arr, 3, 3);
-	SumAllMatrix(arr, 3, 3);
-	cout << "Sum of Matrix is: " << SumAllMatrix(arr, 3, 3);
+	// FillMatrixWithRandomNumbers(arr, 3, 3);
+	// cout << "\n The following is  a 3x3 random matrix:\n\n\n";
+	// PrintMatrix(arr, 3, 3);
+	// SumAllMatrix(arr, 3, 3);
+	// cout << "Sum of Matrix is: " << SumAllMatrix(arr, 3, 3);
+	//Problem #10/03
+	cout << "\n Matrix1:\n\n";
+	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
+	PrintMatrix(Matrix1, 3, 3);
+	cout << "\nSum of Matrix is: " << SumAllMatrix(Matrix1, 3, 3);
+	cout  << "\n------------\n";
+	cout << "\n Matrix2:\n\n";
+	FillMatrixWithRandomNumbers(Matrix2, 3, 3);
+	PrintMatrix(Matrix2, 3, 3);
+	cout << "\nSum of Matrix is: " << SumAllMatrix(Matrix2, 3, 3);
+	if(AreEqualMatrices(Matrix1, Matrix2,3,3))  {
+			cout << "\n\n" << "***Yes : Matrix's are equal***" << endl;
+		}else {
+			cout << "\n\n" << "***No: Matrix's are not equal***" << endl;
+		}
 	
 	return 0;
 	}
