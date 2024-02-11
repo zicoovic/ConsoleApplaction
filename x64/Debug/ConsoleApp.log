@@ -1,12 +1,7 @@
-﻿  algorithmSource1.cpp
-  algorithmSource2.cpp
-  algorithmSource3.cpp
-D:\ConsoleApplaction\algorithmSource3.cpp(288,36): warning C4101: 'MatrixResult': unreferenced local variable
-D:\ConsoleApplaction\algorithmSource3.cpp(249,6): warning C4101: 'arr': unreferenced local variable
-  ConsoleApp.cpp
-  project1.cpp
-  Project2.cpp
-  Generating Code...
+﻿  algorithmSource3.cpp
+D:\ConsoleApplaction\algorithmSource3.cpp(306,36): warning C4101: 'MatrixResult': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.cpp(267,6): warning C4101: 'arr': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.cpp(306,21): warning C4101: 'Matrix2': unreferenced local variable
 D:\ConsoleApplaction\algorithmSource3.cpp(241): warning C4715: 'AreTypicalMatrices': not all control paths return a value
-  LINK : D:\ConsoleApplaction\x64\Debug\ConsoleApp.exe not found or not built by the last incremental link; performing full link
+D:\ConsoleApplaction\algorithmSource3.cpp(259): warning C4715: 'IsIdentityMatrix': not all control paths return a value
   ConsoleApp.vcxproj -> D:\ConsoleApplaction\x64\Debug\ConsoleApp.exe

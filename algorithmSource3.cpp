@@ -240,6 +240,24 @@
 		}
 	}
 
+	// Problem #13/03
+
+	bool IsIdentityMatrix(int Matrix1[3][3], int Rows, int Cols) {
+		for (int i = 0; i < Rows; i++)
+		{
+			for (int j = 0; j < Cols; j++)
+			{
+				if (i == j && Matrix1[i][j] != 1)
+				{
+					return false;
+				}
+				else if (i != j && Matrix1[i][j] != 0) {
+					return false;
+				}
+			}
+		}
+	}
+
 	int main() {
 
 	srand((unsigned)time(NULL));
@@ -327,7 +345,7 @@
 			cout << "\n\n" << "***No: Matrix's are not equal***" << endl;
 		}*/
 	//Problem #12/03
-	cout << "\n Matrix1:\n\n";
+	/*cout << "\n Matrix1:\n\n";
 	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
 	PrintMatrix(Matrix1, 3, 3);
 	cout << "\n Matrix2:\n\n";
@@ -339,6 +357,20 @@
 	}
 	else {
 		cout << "\n\n" << "***No: Matrix's are not equal***" << endl;
+	}*/
+	
+	//Problem #13/03
+	cout << "\n Matrix1:\n\n";
+	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
+	PrintMatrix(Matrix1, 3, 3);
+
+	if (IsIdentityMatrix(Matrix1, 3, 3))
+	{
+		cout << "\n Yes, Matrix is identity" << endl;
 	}
+	else {
+		cout << "\n No, Matrix is Not Identity" << endl;
+	}
+
 	return 0;
 	}
