@@ -225,6 +225,21 @@
 		return (SumAllMatrix(arrMatrix1,Rows,Cols) == SumAllMatrix(arrMatrix2,Rows,Cols));
 	}
 
+	// Problem #12/03
+
+	bool AreTypicalMatrices(int arrMatrix1[3][3], int arrMatrix2[3][3], short Rows, short Cols) {
+		for (int i = 0; i < Rows; i++)
+		{
+			for (int j = 0; j < Cols; j++)
+			{
+				if (arrMatrix1[i][j] != arrMatrix2[i][j])
+				{
+					return false;
+				}
+			}
+		}
+	}
+
 	int main() {
 
 	srand((unsigned)time(NULL));
@@ -296,8 +311,8 @@
 	// PrintMatrix(arr, 3, 3);
 	// SumAllMatrix(arr, 3, 3);
 	// cout << "Sum of Matrix is: " << SumAllMatrix(arr, 3, 3);
-	//Problem #10/03
-	cout << "\n Matrix1:\n\n";
+	//Problem #11/03
+	/*cout << "\n Matrix1:\n\n";
 	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
 	PrintMatrix(Matrix1, 3, 3);
 	cout << "\nSum of Matrix is: " << SumAllMatrix(Matrix1, 3, 3);
@@ -310,7 +325,20 @@
 			cout << "\n\n" << "***Yes : Matrix's are equal***" << endl;
 		}else {
 			cout << "\n\n" << "***No: Matrix's are not equal***" << endl;
-		}
+		}*/
+	//Problem #12/03
+	cout << "\n Matrix1:\n\n";
+	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
+	PrintMatrix(Matrix1, 3, 3);
+	cout << "\n Matrix2:\n\n";
+	FillMatrixWithRandomNumbers(Matrix2, 3, 3);
+	PrintMatrix(Matrix2, 3, 3);
 	
+	if (AreTypicalMatrices(Matrix1, Matrix2, 3, 3)) {
+		cout << "\n\n" << "***Yes : Matrix's are equal***" << endl;
+	}
+	else {
+		cout << "\n\n" << "***No: Matrix's are not equal***" << endl;
+	}
 	return 0;
 	}

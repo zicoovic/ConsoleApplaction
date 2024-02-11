@@ -1,7 +1,12 @@
-﻿  algorithmSource3.cpp
-D:\C++\ConsoleApp\algorithmSource3.cpp(257,36): warning C4101: 'MatrixResult': unreferenced local variable
-D:\C++\ConsoleApp\algorithmSource3.cpp(257,6): warning C4101: 'Matrix1': unreferenced local variable
-D:\C++\ConsoleApp\algorithmSource3.cpp(246,18): warning C4101: 'arrTransposed': unreferenced local variable
-D:\C++\ConsoleApp\algorithmSource3.cpp(229,6): warning C4101: 'arrSum': unreferenced local variable
-D:\C++\ConsoleApp\algorithmSource3.cpp(257,21): warning C4101: 'Matrix2': unreferenced local variable
-  ConsoleApp.vcxproj -> D:\C++\ConsoleApp\x64\Debug\ConsoleApp.exe
+﻿  algorithmSource1.cpp
+  algorithmSource2.cpp
+  algorithmSource3.cpp
+D:\ConsoleApplaction\algorithmSource3.cpp(288,36): warning C4101: 'MatrixResult': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.cpp(249,6): warning C4101: 'arr': unreferenced local variable
+  ConsoleApp.cpp
+  project1.cpp
+  Project2.cpp
+  Generating Code...
+D:\ConsoleApplaction\algorithmSource3.cpp(241): warning C4715: 'AreTypicalMatrices': not all control paths return a value
+  LINK : D:\ConsoleApplaction\x64\Debug\ConsoleApp.exe not found or not built by the last incremental link; performing full link
+  ConsoleApp.vcxproj -> D:\ConsoleApplaction\x64\Debug\ConsoleApp.exe

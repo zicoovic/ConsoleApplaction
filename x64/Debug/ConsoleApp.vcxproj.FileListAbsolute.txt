@@ -1,1 +1,2 @@
 D:\C++\ConsoleApp\x64\Debug\ConsoleApp.exe
+D:\ConsoleApplaction\x64\Debug\ConsoleApp.exe
