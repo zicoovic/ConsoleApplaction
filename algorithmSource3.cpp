@@ -21,7 +21,7 @@
 	{
 	for (int j = 0; j < Cols; j++)
 	{
-		arr[i][j] = ProjectTwo::RandomNumber(1, 100);
+		arr[i][j] = ProjectTwo::RandomNumber(0, 3);
 	}
 	}
 	}
@@ -258,6 +258,53 @@
 		}
 	}
 
+	//Problem #14/03
+
+	bool IsScalarMatrix(int Matrix1[3][3], int Rows, int Cols) {
+
+		int FirstDiagElement = Matrix1[0][0];
+		for (int i = 0; i < Rows; i++)
+		{
+			for (int j = 0; j < Cols; j++)
+			{
+				if (i == j && Matrix1[i][j] != FirstDiagElement)
+				{
+					return false;
+				}
+				else if (i != j && Matrix1[i][j] != 0) {
+					return false;
+				}
+			}
+		}
+
+		return true;
+	}
+
+	//Problem #15/03
+
+	int CountNumberInMatrix(int Matrix1[3][3], int Number, int Rows, int Cols) {
+		int  counter = 0;
+		
+		for (int i = 0; i < Rows; i++)
+		{
+			for (int j = 0; j < Cols; j++)
+			{
+				if (Matrix1[i][j] == Number)
+				{
+					counter++;
+				}
+			}
+		}
+		return counter;
+		
+	}
+
+	//Problem #16/03
+
+	bool IsSparseMatrix(int Matrix1[3][3], int Rows, int Cols) {
+		short MatrixSize = Rows * Cols;
+		return (CountNumberInMatrix( Matrix1, 0, Rows,  Cols) >= (MatrixSize / 2));
+	}
 	int main() {
 
 	srand((unsigned)time(NULL));
@@ -360,7 +407,7 @@
 	}*/
 	
 	//Problem #13/03
-	cout << "\n Matrix1:\n\n";
+	/*cout << "\n Matrix1:\n\n";
 	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
 	PrintMatrix(Matrix1, 3, 3);
 
@@ -370,7 +417,38 @@
 	}
 	else {
 		cout << "\n No, Matrix is Not Identity" << endl;
-	}
+	}*/
 
+	//Problem #14/03
+	/*cout << "\n Matrix1:\n\n";
+	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
+	PrintMatrix(Matrix1, 3, 3);
+	if (IsScalarMatrix(Matrix1, 3, 3))
+	{
+		cout << "\n Yes, Matrix is Scalar" << endl;
+	}
+	else {
+		cout << "\n No, Matrix is Not Scalar" << endl;
+	}*/
+	//Problem #15/03
+	/*int Number;
+	cout << "\n Matrix1:\n\n";
+	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
+	PrintMatrix(Matrix1, 3, 3);
+	cout << endl << "Enter the Number to Count in Matrix: ";
+	cin >> Number;
+	
+	cout << endl << "Number " << Number << " count in Matrix is " << CountNumberInMatrix(Matrix1, Number, 3, 3);*/
+	//Problem #16/03
+	cout << "\n Matrix1:\n\n";
+	FillMatrixWithRandomNumbers(Matrix1, 3, 3);
+	PrintMatrix(Matrix1, 3, 3);
+	if (IsSparseMatrix(Matrix1, 3, 3))
+	{
+		cout << endl <<  "Yes It's Sparse";
+	}
+	else {
+		cout << endl << "No It's Not Sparse";
+	}
 	return 0;
 	}
