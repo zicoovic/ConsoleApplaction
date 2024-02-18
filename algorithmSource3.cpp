@@ -416,7 +416,7 @@
 
 	//Problem #22/03
 
-	void PrintFibonacciUsingRecurssion(short Number, int prev1, int prev2) {
+	void PrintFibonacciUsingRecursion(short Number, int prev1, int prev2) {
 		int febNumber = 0;
 		
 		if (Number > 0)
@@ -425,7 +425,7 @@
 			prev2 = prev1;
 			prev1 = febNumber;
 			cout << febNumber << "    ";
-			PrintFibonacciUsingRecurssion(Number - 1, prev1, prev2);
+			PrintFibonacciUsingRecursion(Number - 1, prev1, prev2);
 		}
 	}
 
@@ -826,7 +826,7 @@
 	//PrintFibonacciUsingLoop(10);
 
 	//Problem #22/03
-	//PrintFibonacciUsingRecurssion(10, 0, 1);
+	//PrintFibonacciUsingRecursion(10, 0, 1);
 	//Problem #23/03
 	//PrintFirstLetterOfEachWord(ReadString());
 	//Problem #24/03
@@ -844,7 +844,7 @@
 	cout << s1 << endl;*/
 	//Problem #27/03
 	/*char charOne = ReadChar();
-	cout << "The charatcter is: " << charOne << endl;
+	cout << "The character is: " << charOne << endl;
 	cout << "\n The char after convert: " << UpperLowerLetterOfChar(charOne);*/
 	//Problem #28/03
 	//string s1 = ReadString();
@@ -855,7 +855,7 @@
 	//Problem #29/03
 	//string s1 = ReadString();
 	//cout << "\nString Length = " << s1.length();
-	//cout << "\nCaptial Letter count = " << CountCapitalLetters(s1);
+	//cout << "\nCapital Letter count = " << CountCapitalLetters(s1);
 	//cout << "\nSmall Letter count = " << CountSmallLetters(s1);
 	//CountString(s1);
 	//Problem #30/03  ++ //Problem #31/03
