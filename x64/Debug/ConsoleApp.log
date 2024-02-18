@@ -1,7 +1,22 @@
 ﻿  algorithmSource3.cpp
-D:\ConsoleApplaction\algorithmSource3.cpp(353,36): warning C4101: 'MatrixResult': unreferenced local variable
-D:\ConsoleApplaction\algorithmSource3.cpp(314,6): warning C4101: 'arr': unreferenced local variable
-D:\ConsoleApplaction\algorithmSource3.cpp(353,21): warning C4101: 'Matrix2': unreferenced local variable
-D:\ConsoleApplaction\algorithmSource3.cpp(241): warning C4715: 'AreTypicalMatrices': not all control paths return a value
-D:\ConsoleApplaction\algorithmSource3.cpp(259): warning C4715: 'IsIdentityMatrix': not all control paths return a value
+D:\ConsoleApplaction\algorithmLib2.h(63,9): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmLib2.h(577,29): warning C4553: '==': result of expression not used; did you intend '='?
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmLib2.h(862,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmLib2.h(874,13): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmSource3.cpp(680,36): warning C4101: 'MatrixResult': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.cpp(680,6): warning C4101: 'Matrix1': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.cpp(641,6): warning C4101: 'arr': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.cpp(680,21): warning C4101: 'Matrix2': unreferenced local variable
+D:\ConsoleApplaction\algorithmLib2.h(431): warning C4715: 'algo2::GetRandomCharacter': not all control paths return a value
+D:\ConsoleApplaction\algorithmLib2.h(824): warning C4715: 'algo2::ReadAbs': not all control paths return a value
+D:\ConsoleApplaction\algorithmSource3.cpp(242): warning C4715: 'AreTypicalMatrices': not all control paths return a value
+D:\ConsoleApplaction\algorithmSource3.cpp(260): warning C4715: 'IsIdentityMatrix': not all control paths return a value
   ConsoleApp.vcxproj -> D:\ConsoleApplaction\x64\Debug\ConsoleApp.exe

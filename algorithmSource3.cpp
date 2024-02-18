@@ -398,6 +398,240 @@
 
 		return true;
 	}
+
+	//Problem #21/03
+
+	void PrintFibonacciUsingLoop(short Number) {
+		int FebNumber = 0;
+		int prev2 = 0, prev1 = 1;
+		cout << "1   ";
+		for (short i = 2; i <= Number; i++)
+		{
+			FebNumber = prev1 + prev2;
+			cout << FebNumber << "     ";
+			prev2 = prev1;
+			prev1 = FebNumber;
+		}
+	}
+
+	//Problem #22/03
+
+	void PrintFibonacciUsingRecurssion(short Number, int prev1, int prev2) {
+		int febNumber = 0;
+		
+		if (Number > 0)
+		{
+			febNumber = prev2 + prev1;
+			prev2 = prev1;
+			prev1 = febNumber;
+			cout << febNumber << "    ";
+			PrintFibonacciUsingRecurssion(Number - 1, prev1, prev2);
+		}
+	}
+
+	//Problem #23/03
+
+	string ReadString() {
+		string Write;
+		cout << "Please Enter Your String\n";
+		getline(cin, Write);
+		return Write;
+	}
+
+	void PrintFirstLetterOfEachWord(string s1) {
+		bool isFirstLetter = true;
+		cout << "\nFirst Letters of this string:  \n";
+		for (short i = 0; i < s1.length(); i++)
+		{
+			if (s1[i] != ' ' && isFirstLetter)
+			{
+				cout << toupper(s1[i]) << endl;
+			}
+			isFirstLetter = (s1[i] == ' ' ? true : false);
+		}
+	}
+
+	//Problem #25/03
+
+	string UpperFirstLetterOfEachWord(string s1) {
+
+		bool isFirstLetter = true;
+		for (short i = 0; i < s1.length(); i++)
+		{
+			if (s1[i] != ' ' && isFirstLetter)
+			{
+				s1[i] = toupper(s1[i]);
+			}
+			isFirstLetter = (s1[i] == ' ' ? true : false);
+		}
+
+		return s1;
+	}
+
+	//Problem #25/03
+
+	string LowerFirstLetterOfEachWord(string s1) {
+
+		bool isFirstLetter = true;
+		for (short i = 0; i < s1.length(); i++)
+		{
+			if (s1[i] != ' ' && isFirstLetter)
+			{
+				s1[i] = tolower(s1[i]);
+			}
+			isFirstLetter = (s1[i] == ' ' ? true : false);
+		}
+
+		return s1;
+	}
+
+	//Problem #26/03
+	string UpperAllString(string s1) {
+		for (short i = 0; i < s1.length(); i++)
+		{
+			s1[i] = toupper(s1[i]);
+		}
+		return s1;
+	}
+
+	string LowerAllString(string s1) {
+		for (short i = 0; i < s1.length(); i++)
+		{
+			s1[i] = tolower(s1[i]);
+		}
+		return s1;
+	}
+
+	// Problem 27/03
+
+	char ReadChar() {
+		char Char;
+		cout << "Please write the character" << endl;
+		cin >> Char;
+		return Char;
+	}
+
+	char UpperLowerLetterOfChar(char s1) {
+			return isupper(s1) ?  tolower(s1) :  toupper(s1);
+	}
+
+	//Problem #28/03
+
+	string LowerAllString1(string s1) {
+		for (short i = 0; i < s1.length(); i++)
+		{
+			isupper(s1[i]) ? s1[i] = tolower(s1[i]) : toupper(s1[i]);
+		}
+		return s1;
+	}
+
+
+	string InvertAllStringLettersCase(string s1) {
+		for (short i = 0; i < s1.length(); i++)
+		{
+			s1[i] = UpperLowerLetterOfChar(s1[i]);
+		}
+		return s1;
+	}
+
+	//Problem #29/03
+
+	/*void CountString(string s1) {
+		int LengthCounter = 0, CapitalLetterCounter = 0, SmallLetterCounter = 0;
+		for (short i = 0; i < s1.length(); i++)
+		{
+			if (isupper(s1[i]))
+			{
+				CapitalLetterCounter++;
+			}
+			else if (islower(s1[i]))
+			{
+				SmallLetterCounter++;
+			}
+		}
+		cout << "\nstring Length = " << s1.length();
+		cout << "\nCapital Letters Count = " << CapitalLetterCounter;
+		cout << "\nSmall Letters count = " << SmallLetterCounter;
+	}*/
+
+	int CountCapitalLetters(string S1) {
+		int CapitalLetterCounter = 0;
+		for (short i = 0; i < S1.length(); i++)
+		{
+			if (isupper(S1[i]))
+			{
+				CapitalLetterCounter++;
+			}
+		}
+		return CapitalLetterCounter;
+	}
+
+	int CountSmallLetters(string S1) {
+		int smallLetterCounter = 0;
+		for (short i = 0; i < S1.length(); i++)
+		{
+			if (islower(S1[i]))
+			{
+				smallLetterCounter++;
+			}
+		}
+		return smallLetterCounter;
+	}
+
+
+	//Problem #30/03  ++ //Problem #32/03
+
+
+	short countLetter(char Letter, string s1 , bool MatchCase = true) {
+		short counter = 0;
+
+		for (short i = 0; i < s1.length(); i++)
+		{
+			if ( MatchCase)
+			{
+				if (s1[i] == Letter)
+					counter++;
+			}
+			else {
+				if (tolower(s1[i]) == tolower(Letter))
+					counter++;
+			}
+		}
+			return counter;
+	}
+
+	//Problem #32/03
+
+
+
+	bool CheckVowel(vector <char> vowel, char Letter) {
+		for (int i = 0; i < vowel.size(); i++)
+		{
+			if (tolower(Letter) == vowel[i])
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	//Problem #33/03
+
+	short CheckVowelInString(vector <char> vowel, string Letter) {
+		short counter = 0;
+		for (int i = 0; i < Letter.length(); i++)
+		{
+		
+			char lowercaseLetter = tolower(Letter[i]); // Convert current letter to lowercase
+			for (char v : vowel) {
+				if (tolower(v) == lowercaseLetter) {
+					counter++;
+				}
+			}
+		}
+		return counter;
+	}
+
 	int main() {
 
 	srand((unsigned)time(NULL));
@@ -578,7 +812,7 @@
 	// cout << PrintMaxNumberInMatrix(arr,3,3);
 	// cout << "The Palindrome Number is: ";
 	//Problem #20/03
-		cout << "\n Matrix1:\n\n";
+	/*	cout << "\n Matrix1:\n\n";
 	FillMatrixWithRandomNumbers(arr, 3, 3);
 	PrintMatrix(arr, 3, 3);
 	if (palindromeMatrix(Matrix1,3,3))
@@ -586,7 +820,62 @@
 		cout << "Yes it's Palindrome" << endl;
 	}else {
 		cout << "No it's not Palindrome" << endl;
-	}
+	}*/
+
+	// Problem #21/03
+	//PrintFibonacciUsingLoop(10);
+
+	//Problem #22/03
+	//PrintFibonacciUsingRecurssion(10, 0, 1);
+	//Problem #23/03
+	//PrintFirstLetterOfEachWord(ReadString());
+	//Problem #24/03
+	//cout << UpperFirstLetterOfEachWord(ReadString());
+	//Problem #25/03
+	//cout << LowerFirstLetterOfEachWord(ReadString());
+	//Problem #26/03
+	//cout << UpperLowerLetterOfString(ReadString());
+	/*string s1 = ReadString();
+	cout << "All string upper" << endl;
+	s1= UpperAllString(s1);
+	cout << s1 << endl;
+	cout << "All string Lower" << endl;
+	s1 = LowerAllString(s1);
+	cout << s1 << endl;*/
+	//Problem #27/03
+	/*char charOne = ReadChar();
+	cout << "The charatcter is: " << charOne << endl;
+	cout << "\n The char after convert: " << UpperLowerLetterOfChar(charOne);*/
+	//Problem #28/03
+	//string s1 = ReadString();
+	//cout << s1 << endl;
+	/*cout << "\n after convert: ";
+	s1 = LowerAllString1(s1);
+	cout << s1 << endl;*/
+	//Problem #29/03
+	//string s1 = ReadString();
+	//cout << "\nString Length = " << s1.length();
+	//cout << "\nCaptial Letter count = " << CountCapitalLetters(s1);
+	//cout << "\nSmall Letter count = " << CountSmallLetters(s1);
+	//CountString(s1);
+	//Problem #30/03  ++ //Problem #31/03
+	//char letter = ReadChar();
 	
-	return 0;
+		//cout << "\n The Letter " << letter << " Count " << countLetter(letter, s1) << " Times\n";
+		//cout << "\n The Letter " << letter << " or " << UpperLowerLetterOfChar(letter) << " Count " << countLetter(letter, s1, false)<< " Times\n";
+	
+	//Problem #32/03
+
+		/*vector <char> VowelChar = { 'a', 'e', 'i' , 'o' , 'u' };
+		if (CheckVowel(VowelChar, letter))
+			cout << "\nYes, The Letter is Vowel" << endl;
+		else
+			cout << "\nNo, The Letter is not Vowel" << endl;*/
+
+	//Problem #33/03
+		string letter = ReadString();
+		vector <char> VowelChar = { 'a', 'e', 'i' , 'o' , 'u' };
+		cout << "The Number of Vowels is: " << CheckVowelInString(VowelChar, letter);
+		
+		return 0;
 	}
