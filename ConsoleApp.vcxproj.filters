@@ -50,5 +50,8 @@
     <ClInclude Include="ProjectTwoLib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="algorithmSource3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

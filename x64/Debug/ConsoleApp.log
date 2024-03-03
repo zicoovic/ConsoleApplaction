@@ -11,12 +11,32 @@ D:\ConsoleApplaction\algorithmLib2.h(862,27): warning C4244: 'argument': convers
 D:\ConsoleApplaction\algorithmLib2.h(874,13): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
   (compiling source file 'algorithmSource3.cpp')
   
-D:\ConsoleApplaction\algorithmSource3.cpp(680,36): warning C4101: 'MatrixResult': unreferenced local variable
-D:\ConsoleApplaction\algorithmSource3.cpp(680,6): warning C4101: 'Matrix1': unreferenced local variable
-D:\ConsoleApplaction\algorithmSource3.cpp(641,6): warning C4101: 'arr': unreferenced local variable
-D:\ConsoleApplaction\algorithmSource3.cpp(680,21): warning C4101: 'Matrix2': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.h(671,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmSource3.h(695,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmSource3.h(721,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmSource3.h(756,16): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmSource3.h(820,13): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmSource3.h(824,17): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'algorithmSource3.cpp')
+  
+D:\ConsoleApplaction\algorithmSource3.cpp(66,36): warning C4101: 'MatrixResult': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.cpp(66,6): warning C4101: 'Matrix1': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.cpp(27,6): warning C4101: 'arr': unreferenced local variable
+D:\ConsoleApplaction\algorithmSource3.cpp(66,21): warning C4101: 'Matrix2': unreferenced local variable
 D:\ConsoleApplaction\algorithmLib2.h(431): warning C4715: 'algo2::GetRandomCharacter': not all control paths return a value
 D:\ConsoleApplaction\algorithmLib2.h(824): warning C4715: 'algo2::ReadAbs': not all control paths return a value
-D:\ConsoleApplaction\algorithmSource3.cpp(242): warning C4715: 'AreTypicalMatrices': not all control paths return a value
-D:\ConsoleApplaction\algorithmSource3.cpp(260): warning C4715: 'IsIdentityMatrix': not all control paths return a value
+D:\ConsoleApplaction\algorithmSource3.h(264): warning C4715: 'algo3::IsIdentityMatrix': not all control paths return a value
+D:\ConsoleApplaction\algorithmSource3.h(246): warning C4715: 'algo3::AreTypicalMatrices': not all control paths return a value
+D:\ConsoleApplaction\algorithmSource3.h(1117): warning C4715: 'algo3::DeleteClientByAccountNumber': not all control paths return a value
+D:\ConsoleApplaction\algorithmSource3.h(1175): warning C4715: 'algo3::UpdateClientByAccountNumber': not all control paths return a value
   ConsoleApp.vcxproj -> D:\ConsoleApplaction\x64\Debug\ConsoleApp.exe

@@ -8,629 +8,15 @@
 	#include "algorithmLib2.h"
 	#include "MyLib.h"
 	#include "ProjectTwoLib.h"
+	#include "algorithmSource3.h"
 	#include <iomanip>
 	#include <cctype>
 	#include <fstream>
+	#include <iomanip>
 	using namespace std;
+	using namespace algo3;
 
-	// problem #1/03
-	//Problem for action
-	// problem for working laptop
 
-	void FillMatrixWithRandomNumbers(int arr[3][3] , short Rows , short Cols) {
-	for (short i = 0; i < Rows; i++)
-	{
-	for (int j = 0; j < Cols; j++)
-	{
-		arr[i][j] = ProjectTwo::RandomNumber(1, 100);
-	}
-	}
-	}
-
-	void PrintMatrix(int arr[3][3], short Rows, short Cols) {
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				
-				printf(" %0*d  ", 2, arr[i][j]);
-				
-			}
-			cout << "\n";
-		}
-	}
-
-	// problem 2/03
-
-	int RowSum(int arr[3][3], short RowNumber, short Cols) {
-
-		int sum = 0;
-		for (short j = 0; j <= Cols - 1; j++)
-		{
-			sum += arr[RowNumber][j];
-		}
-
-		return sum;
-	}
-
-	void PrintEachRowSum(int arr[3][3], short Rows, short Cols) {
-		cout << "-----------------" << endl;
-		for (int i = 0; i < Rows; i++)
-		{
-			cout << " Row " << i + 1 << " Sum = " << RowSum(arr, i, Cols) << endl;
-		}
-	}
-
-	// problem 3/03
-
-	void SumMatrixRowsInArray(int arr[3][3], int arrSum[3], short Rows, short Cols) {
-		for (int i = 0; i < Rows; i++)
-		{
-			arrSum[i] = RowSum(arr, i, Cols);
-		}
-	}
-
-	void PrintRowsSumArray(int arr[3], short Rows) {
-		cout << "\nThe Following are the sum of each row in the matrix:\n";
-
-		for (int i = 0; i < Rows; i++)
-		{
-			cout << " Row " << i + 1 << " Sum = " << arr[i] << endl;
-		}
-	}
-
-	// Problem #4/03
-
-	int ColSum(int arr[3][3], short Rows, short ColNumber) {
-
-		int sum = 0;
-		for (short j = 0; j <= Rows - 1; j++)
-		{
-			sum += arr[j][ColNumber];
-		}
-
-		return sum;
-	}
-
-	void PrintEachColSum(int arr[3][3], short Rows, short Cols) {
-		cout << "-----------------" << endl;
-		for (int i = 0; i < Cols; i++)
-		{
-			cout << " Col " << i + 1 << " Sum = " << ColSum(arr, Rows, i) << endl;
-		}
-	}
-
-	//Problem #5/03
-
-	void SumMatrixColsInArray(int arr[3][3], int arrSum[3], short Cols, short Rows) {
-		for (int i = 0; i < Cols; i++)
-		{
-			arrSum[i] = ColSum(arr, Rows, i );
-		}
-	}
-
-	void PrintColsSumArray(int arr[3], short Cols) {
-		cout << "\nThe Following are the sum of each Cols in the matrix:\n";
-
-		for (int i = 0; i < Cols; i++)
-		{
-			cout << " Row " << i + 1 << " Sum = " << arr[i] << endl;
-		}
-	}
-
-	//Problem #6/03
-
-	void FillMatrixWithOrderedNumbers(int arr[3][3], short Rows, short Cols) {
-		short counter = 0;
-		for (short i = 0; i < Rows; i++)
-		{
-		
-			for (int j = 0; j < Cols; j++)
-			{
-				counter++; 
-
-				arr[i][j] = counter;
-			}
-		}
-	}
-
-	//Problem #7/03
-
-	void TransposeMatrix(int arr[3][3], int arrTransposed[3][3], short Rows, short Cols) {
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				arrTransposed[i][j] = arr[j][i];
-			}
-		
-		}
-	}
-
-	void PrintArrTranspose(int arr[3][3], short Rows, short Cols) {
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				cout << setw(3) << arr[j][i] << "    ";
-			}
-			cout << "\n";
-		}
-	}
-
-	// Problem #08/03
-
-	void MultMatrixes(int Matrix1[3][3],  int Matrix2[3][3], int MatrixResult[3][3], short Rows, short Cols) {
-
-	
-		for (short i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				MatrixResult[i][j] = Matrix1[i][j] * Matrix2[i][j];
-			}
-		}
-
-		
-	}
-
-	// Problem #09/03
-
-	void PrintMiddleRowOfMatrix(int arr[3][3], int Rows, int Cols) {
-		short MiddleRow = Rows / 2;
-
-		for (int i = 0; i < Cols; i++)
-		{
-			printf(" %0*d  ", 2, arr[MiddleRow][i]);
-		}
-		cout << "\n";
-	}
-
-	void PrintMiddleColsOfMatrix(int arr[3][3], int Rows, int Cols) { 
-		short MiddleCols = Cols / 2;
-
-		for (int i = 0; i < Rows; i++)
-		{
-			printf(" %0*d  ", 2, arr[i][MiddleCols]);
-		}
-		cout << "\n";
-	}
-
-
-	//Problem #10/03
-	int SumAllMatrix(int arr[3][3],  short Rows, short Cols) {
-
-		int sum = 0;
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				sum+= arr[j][i];
-			}
-
-		}
-		return sum;
-	}
-
-	//Problem #11/03
-	//MySolution
-	void CompareMatrix(int arrMatrix1[3][3] , int arrMatrix2[3][3] , short Rows, short Cols) {
-		if(arrMatrix1 == arrMatrix2)  {
-			cout << "\n\n" << "***Yes : Matrix's are equal***" << endl;
-		}else {
-			cout << "\n\n" << "***No: Matrix's are not equal***" << endl;
-		}
-	}
-
-	bool AreEqualMatrices(int arrMatrix1[3][3] , int arrMatrix2[3][3] , short Rows, short Cols) {
-		return (SumAllMatrix(arrMatrix1,Rows,Cols) == SumAllMatrix(arrMatrix2,Rows,Cols));
-	}
-
-	// Problem #12/03
-
-	bool AreTypicalMatrices(int arrMatrix1[3][3], int arrMatrix2[3][3], short Rows, short Cols) {
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				if (arrMatrix1[i][j] != arrMatrix2[i][j])
-				{
-					return false;
-				}
-			}
-		}
-	}
-
-	// Problem #13/03
-
-	bool IsIdentityMatrix(int Matrix1[3][3], int Rows, int Cols) {
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				if (i == j && Matrix1[i][j] != 1)
-				{
-					return false;
-				}
-				else if (i != j && Matrix1[i][j] != 0) {
-					return false;
-				}
-			}
-		}
-	}
-
-	//Problem #14/03
-
-	bool IsScalarMatrix(int Matrix1[3][3], int Rows, int Cols) {
-
-		int FirstDiagElement = Matrix1[0][0];
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				if (i == j && Matrix1[i][j] != FirstDiagElement)
-				{
-					return false;
-				}
-				else if (i != j && Matrix1[i][j] != 0) {
-					return false;
-				}
-			}
-		}
-
-		return true;
-	}
-
-	//Problem #15/03
-
-	int CountNumberInMatrix(int Matrix1[3][3], int Number, int Rows, int Cols) {
-		int  counter = 0;
-		
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				if (Matrix1[i][j] == Number)
-				{
-					counter++;
-				}
-			}
-		}
-		return counter;
-		
-	}
-
-	//Problem #16/03
-
-	bool IsSparseMatrix(int Matrix1[3][3], int Rows, int Cols) {
-		short MatrixSize = Rows * Cols;
-		return (CountNumberInMatrix( Matrix1, 0, Rows,  Cols) >= (MatrixSize / 2));
-	}
-
-	//Problem #17/03
-
-	bool CheckNumber(int Matrix1[3][3],int Number,  int Rows, int Cols) {
-			for (int i = 0; i < Rows; i++)
-			{
-				for (int j = 0; j < Cols; j++)
-				{
-					if (Number == Matrix1[i][j])
-					{
-						return true;
-					}
-				}
-			}
-			return false;
-	}
-
-	//Problem #18/03
-
-	
-	void PrintIntersectedMatrix(int arr1[3][3], int arr2[3][3], short Rows, short Cols) {
-		int Number;
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				Number = arr1[i][j];
-
-				if (CheckNumber(arr2,Number,Rows,Cols)) {
-					cout  <<setw(3) << Number << "    ";
-            }
-			}
-		
-		}
-	}
-
-	//Problem #19/03
-
-	int PrintMinNumberInMatrix(int Matrix1[3][3],  int Rows, int Cols) {
-
-		int MinNumber  = Matrix1[0][0];
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-				MinNumber  = min(MinNumber , Matrix1[i][j]);
-
-				// if (Matrix1[i][j] < MinNumber)
-				// {
-				// 	MinNumber = Matrix1[i][j];
-				// }
-			
-			}
-		
-		}
-		return MinNumber;
-	}
-
-	int PrintMaxNumberInMatrix(int Matrix1[3][3],  int Rows, int Cols) {
-
-		int MaxNumber  = Matrix1[0][0];
-		for (int i = 0; i < Rows; i++)
-		{
-			for (int j = 0; j < Cols; j++)
-			{
-
-				MaxNumber  = max(MaxNumber , Matrix1[i][j]);
-				// if (Matrix1[i][j] > MaxNumber)
-				// {
-				// 	MaxNumber = Matrix1[i][j];
-				// }
-			
-			}
-		
-		}
-		return MaxNumber;
-	}
-
-	//Problem #20/03
-
-	bool palindromeMatrix(int Matrix[3][3], int Rows, int Cols) {
-		for (int i = 0; i < Rows; i++) {
-			for (int j = 0; j < Cols / 2; j++)
-			{
-				if (Matrix[i][j] != Matrix[i][Cols - 1 - j]){
-				return false;
-			}
-			}
-		}
-
-		return true;
-	}
-
-	//Problem #21/03
-
-	void PrintFibonacciUsingLoop(short Number) {
-		int FebNumber = 0;
-		int prev2 = 0, prev1 = 1;
-		cout << "1   ";
-		for (short i = 2; i <= Number; i++)
-		{
-			FebNumber = prev1 + prev2;
-			cout << FebNumber << "     ";
-			prev2 = prev1;
-			prev1 = FebNumber;
-		}
-	}
-
-	//Problem #22/03
-
-	void PrintFibonacciUsingRecursion(short Number, int prev1, int prev2) {
-		int febNumber = 0;
-		
-		if (Number > 0)
-		{
-			febNumber = prev2 + prev1;
-			prev2 = prev1;
-			prev1 = febNumber;
-			cout << febNumber << "    ";
-			PrintFibonacciUsingRecursion(Number - 1, prev1, prev2);
-		}
-	}
-
-	//Problem #23/03
-
-	string ReadString() {
-		string Write;
-		cout << "Please Enter Your String\n";
-		getline(cin, Write);
-		return Write;
-	}
-
-	void PrintFirstLetterOfEachWord(string s1) {
-		bool isFirstLetter = true;
-		cout << "\nFirst Letters of this string:  \n";
-		for (short i = 0; i < s1.length(); i++)
-		{
-			if (s1[i] != ' ' && isFirstLetter)
-			{
-				cout << toupper(s1[i]) << endl;
-			}
-			isFirstLetter = (s1[i] == ' ' ? true : false);
-		}
-	}
-
-	//Problem #25/03
-
-	string UpperFirstLetterOfEachWord(string s1) {
-
-		bool isFirstLetter = true;
-		for (short i = 0; i < s1.length(); i++)
-		{
-			if (s1[i] != ' ' && isFirstLetter)
-			{
-				s1[i] = toupper(s1[i]);
-			}
-			isFirstLetter = (s1[i] == ' ' ? true : false);
-		}
-
-		return s1;
-	}
-
-	//Problem #25/03
-
-	string LowerFirstLetterOfEachWord(string s1) {
-
-		bool isFirstLetter = true;
-		for (short i = 0; i < s1.length(); i++)
-		{
-			if (s1[i] != ' ' && isFirstLetter)
-			{
-				s1[i] = tolower(s1[i]);
-			}
-			isFirstLetter = (s1[i] == ' ' ? true : false);
-		}
-
-		return s1;
-	}
-
-	//Problem #26/03
-	string UpperAllString(string s1) {
-		for (short i = 0; i < s1.length(); i++)
-		{
-			s1[i] = toupper(s1[i]);
-		}
-		return s1;
-	}
-
-	string LowerAllString(string s1) {
-		for (short i = 0; i < s1.length(); i++)
-		{
-			s1[i] = tolower(s1[i]);
-		}
-		return s1;
-	}
-
-	// Problem 27/03
-
-	char ReadChar() {
-		char Char;
-		cout << "Please write the character" << endl;
-		cin >> Char;
-		return Char;
-	}
-
-	char UpperLowerLetterOfChar(char s1) {
-			return isupper(s1) ?  tolower(s1) :  toupper(s1);
-	}
-
-	//Problem #28/03
-
-	string LowerAllString1(string s1) {
-		for (short i = 0; i < s1.length(); i++)
-		{
-			isupper(s1[i]) ? s1[i] = tolower(s1[i]) : toupper(s1[i]);
-		}
-		return s1;
-	}
-
-
-	string InvertAllStringLettersCase(string s1) {
-		for (short i = 0; i < s1.length(); i++)
-		{
-			s1[i] = UpperLowerLetterOfChar(s1[i]);
-		}
-		return s1;
-	}
-
-	//Problem #29/03
-
-	/*void CountString(string s1) {
-		int LengthCounter = 0, CapitalLetterCounter = 0, SmallLetterCounter = 0;
-		for (short i = 0; i < s1.length(); i++)
-		{
-			if (isupper(s1[i]))
-			{
-				CapitalLetterCounter++;
-			}
-			else if (islower(s1[i]))
-			{
-				SmallLetterCounter++;
-			}
-		}
-		cout << "\nstring Length = " << s1.length();
-		cout << "\nCapital Letters Count = " << CapitalLetterCounter;
-		cout << "\nSmall Letters count = " << SmallLetterCounter;
-	}*/
-
-	int CountCapitalLetters(string S1) {
-		int CapitalLetterCounter = 0;
-		for (short i = 0; i < S1.length(); i++)
-		{
-			if (isupper(S1[i]))
-			{
-				CapitalLetterCounter++;
-			}
-		}
-		return CapitalLetterCounter;
-	}
-
-	int CountSmallLetters(string S1) {
-		int smallLetterCounter = 0;
-		for (short i = 0; i < S1.length(); i++)
-		{
-			if (islower(S1[i]))
-			{
-				smallLetterCounter++;
-			}
-		}
-		return smallLetterCounter;
-	}
-
-
-	//Problem #30/03  ++ //Problem #32/03
-
-
-	short countLetter(char Letter, string s1 , bool MatchCase = true) {
-		short counter = 0;
-
-		for (short i = 0; i < s1.length(); i++)
-		{
-			if ( MatchCase)
-			{
-				if (s1[i] == Letter)
-					counter++;
-			}
-			else {
-				if (tolower(s1[i]) == tolower(Letter))
-					counter++;
-			}
-		}
-			return counter;
-	}
-
-	//Problem #32/03
-
-
-
-	bool CheckVowel(vector <char> vowel, char Letter) {
-		for (int i = 0; i < vowel.size(); i++)
-		{
-			if (tolower(Letter) == vowel[i])
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-
-	//Problem #33/03
-
-	short CheckVowelInString(vector <char> vowel, string Letter) {
-		short counter = 0;
-		for (int i = 0; i < Letter.length(); i++)
-		{
-		
-			char lowercaseLetter = tolower(Letter[i]); // Convert current letter to lowercase
-			for (char v : vowel) {
-				if (tolower(v) == lowercaseLetter) {
-					counter++;
-				}
-			}
-		}
-		return counter;
-	}
 
 	int main() {
 
@@ -873,9 +259,99 @@
 			cout << "\nNo, The Letter is not Vowel" << endl;*/
 
 	//Problem #33/03
-		string letter = ReadString();
+		//string letter = ReadString();
 		vector <char> VowelChar = { 'a', 'e', 'i' , 'o' , 'u' };
-		cout << "The Number of Vowels is: " << CheckVowelInString(VowelChar, letter);
+		//cout << "The Number of Vowels is: " << CheckVowelInString(VowelChar, letter);
+	//Problem #34/03
+		//PrintVowelsInString(VowelChar, letter);
+	//Problem #35/03
+		//PrntString(letter);
+		//PrintWordsInString(letter);
+	//Problem #36/03
+		//cout << "The words in string are: " << CountEachWordsInString(letter);
+	//Problem #37/03
+		/*vector<string> vString;
+		vString = SplitString(ReadString(), " ");
+		cout << "Tokens = " << vString.size() << endl;
+		for (string s : vString) {
+			cout << s << endl;
+		}*/
+	//Problem #38/03
+		//cout << endl << Trim(letter) << endl << endl << TrimRight(letter) << endl << endl << TrimLeft(letter);
 		
+	//Problem #39/03 #40/03
+		/*vector <string> join = {"ahmed" , "ali" , "maged" , "medhat"};
+		string  join1[] = {"ahmed" , "ali" , "maged" , "medhat"};
+		cout << "\nVector after join:\n" << endl;
+		cout << JoinString(join , " ");
+		cout << "\n\nArray after join:\n" << endl;
+		cout << JoinString(join1, 4 , " ");*/
+	//Problem #41/03
+		/*cout << "\n\nString after reversing words: ";
+		cout << endl << ReverseWordsInString(letter);*/
+	//Problem #42/03
+		/*string S1 = ReadString();
+		string ReplaceWord = "Egypt";
+		string ToReplace = "Tanta";
+		cout << endl << "Original String\n" << S1;
+		cout << endl << "String After Replace: \n" << ReplaceWordInString(S1, ReplaceWord, ToReplace);*/
+	//Problem #43/03
+		//string s1 = "Welcome to Egypt , Egypt is a nice country";
+		//string stringToReplace = "egypt";
+		//string ReplaceTo = "Russia";
+		//cout << "Orginal String: \n" << s1 << endl;
+		//cout << "\n\nReplace with match case: ";
+		//cout << "\n" << ReplaceCustomString(s1, stringToReplace, ReplaceTo);
+		//cout << "\n\nReplace with dont Match case: ";
+		//cout << "\n" << ReplaceCustomString(s1, stringToReplace, ReplaceTo, false);
+	//Problem #44/03
+		/*string letter = ReadString();
+		cout << "Punctuations Removel: \n\n";
+		cout << endl <<  RemovePunctuations(letter);*/
+	//Problem #45/03
+	/*	Client client;
+		client = ReadClientData();
+		cout << "\n\nClient Record for Saving is: \n";
+		cout << ConvertRecordToLine(client);*/
+	//Problem #46/03
+	/*	Client client;
+		string Record = ConvertRecordToLine(client);
+		ReadClientData();*/
+		/*string stLine = "A150#//#1234#//#Ahmed#//#7777777#//#100000";
+		cout << "\n\nClient Record for Saving is: \n" << stLine;
+	  convertLineToRecord(stLine);
+		PrintClientRecord(convertLineToRecord(stLine));*/
+
+	//Problem #47/03
+
+		//AddClients();
+	//Problem #48/03
+
+		/*vector <Client> vClients = LoadClientsDataFromFile(ClientsFileName);
+		PrintAllClientsData(vClients);*/
+
+	//Problme #49/03
+
+		/*Client client;
+		string AccountNumber = ReadClientAccountNumber();
+
+		if (FindClientByAccountNumber(AccountNumber, client)) 
+		{ 
+			PrintClientCard(client);
+		}
+		else {
+			cout << "\nClient with Account Number (" << AccountNumber << ") is Not Found!";
+		}*/
+
+	//Problem #50/03
+
+		/*vector <Client> vClients = LoadClientsDataFromFile(ClientsFileName);
+		string AccountNumber = ReadClientAccountNumber();
+		DeleteClientByAccountNumber(AccountNumber, vClients);*/
+
+	//Problem #51/03
+		vector <Client> vClients = LoadClientsDataFromFile(ClientsFileName);
+		string AccountNumber = ReadClientAccountNumber();
+		UpdateClientByAccountNumber(AccountNumber, vClients);
 		return 0;
 	}

@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="algorithmLib1.h" />
     <ClInclude Include="algorithmLib2.h" />
+    <ClInclude Include="algorithmSource3.h" />
     <ClInclude Include="MyLib.h" />
     <ClInclude Include="ProjectOneLib.h" />
     <ClInclude Include="ProjectTwoLib.h" />
