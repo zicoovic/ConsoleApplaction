@@ -1,30 +1,30 @@
-	#include <iostream>
-	#include <cmath>
-	#include <string>
-	#include <algorithm>
-	#include <array>
-	#include <vector>
-	#include <cstdlib>
-	#include "algorithmLib2.h"
-	#include "MyLib.h"
-	#include "ProjectTwoLib.h"
-	#include "algorithmSource3.h"
-	#include <iomanip>
-	#include <cctype>
-	#include <fstream>
-	#include <iomanip>
-	using namespace std;
-	using namespace algo3;
+	//#include <iostream>
+	//#include <cmath>
+	//#include <string>
+	//#include <algorithm>
+	//#include <array>
+	//#include <vector>
+	//#include <cstdlib>
+	//#include "algorithmLib2.h"
+	//#include "MyLib.h"
+	//#include "ProjectTwoLib.h"
+	//#include "algorithmSource3.h"
+	//#include <iomanip>
+	//#include <cctype>
+	//#include <fstream>
+	//#include <iomanip>
+	//using namespace std;
+	//using namespace algo3;
 
 
 
-	int main() {
+	//int main() {
 
-	srand((unsigned)time(NULL));
+	//srand((unsigned)time(NULL));
 
 	//Problem #1/03
 
-	int arr[3][3];
+	//int arr[3][3];
 	/*FillMatrixWithRandomNumbers(arr, 3, 3);
 	cout << "\n The following is  a 3x3 random matrix:\n\n\n";
 	PrintMatrix(arr, 3, 3);*/
@@ -63,7 +63,7 @@
 	PrintArrTranspose(arrTransposed, 3, 3);*/
 
 	//Problem #8/03
-	int Matrix1[3][3], Matrix2[3][3], MatrixResult[3][3];
+	//int Matrix1[3][3], Matrix2[3][3], MatrixResult[3][3];
 
 	/*FillMatrixWithRandomNumbers(Matrix1, 3, 3);
 	cout << "\n Matrix1:\n\n\n";
@@ -260,7 +260,7 @@
 
 	//Problem #33/03
 		//string letter = ReadString();
-		vector <char> VowelChar = { 'a', 'e', 'i' , 'o' , 'u' };
+		//vector <char> VowelChar = { 'a', 'e', 'i' , 'o' , 'u' };
 		//cout << "The Number of Vowels is: " << CheckVowelInString(VowelChar, letter);
 	//Problem #34/03
 		//PrintVowelsInString(VowelChar, letter);
@@ -350,8 +350,8 @@
 		DeleteClientByAccountNumber(AccountNumber, vClients);*/
 
 	//Problem #51/03
-		vector <Client> vClients = LoadClientsDataFromFile(ClientsFileName);
-		string AccountNumber = ReadClientAccountNumber();
-		UpdateClientByAccountNumber(AccountNumber, vClients);
-		return 0;
-	}
+		//vector <Client> vClients = LoadClientsDataFromFile(ClientsFileName);
+		//string AccountNumber = ReadClientAccountNumber();
+		//UpdateClientByAccountNumber(AccountNumber, vClients);
+		//return 0;
+	//}

@@ -130,16 +130,19 @@
     <ClCompile Include="algorithmSource1.cpp" />
     <ClCompile Include="algorithmSource2.cpp" />
     <ClCompile Include="algorithmSource3.cpp" />
-    <ClCompile Include="ConsoleApp.cpp" />
+    <ClCompile Include="algorithmSource4.cpp" />
     <ClCompile Include="project1.cpp" />
     <ClCompile Include="Project2.cpp" />
+    <ClCompile Include="Project3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithmLib1.h" />
     <ClInclude Include="algorithmLib2.h" />
-    <ClInclude Include="algorithmSource3.h" />
+    <ClInclude Include="algorithmLib3.h" />
+    <ClInclude Include="algorithmLib4.h" />
     <ClInclude Include="MyLib.h" />
     <ClInclude Include="ProjectOneLib.h" />
+    <ClInclude Include="ProjectThreeLib.h" />
     <ClInclude Include="ProjectTwoLib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

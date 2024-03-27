@@ -110,9 +110,9 @@
 
 			// Problem #22/2
 
-	int arr[100], arrSum[100], NumberToCheck;
-	int arr2[100];
-	int arrLength = 0, arrLength2 = 0;
+	//int arr[100], arrSum[100], NumberToCheck;
+	//int arr2[100];
+	//int arrLength = 0, arrLength2 = 0;
 
 	/*ReadArray(arr, arrLength);
 
