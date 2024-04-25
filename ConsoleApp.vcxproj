@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="algorithmLib4.cpp" />
     <ClCompile Include="algorithmSource1.cpp" />
     <ClCompile Include="algorithmSource2.cpp" />
     <ClCompile Include="algorithmSource3.cpp" />
